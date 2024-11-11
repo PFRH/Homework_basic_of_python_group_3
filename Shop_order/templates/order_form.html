@@ -1,0 +1,46 @@
+<!-- templates/order_form.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestellformular</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Bestellformular</h1>
+    <form action="{{ url_for('submit_order') }}" method="post">
+        <label for="email">E-Mail:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="vorname">Vorname:</label><br>
+        <input type="text" id="vorname" name="vorname" required><br><br>
+
+        <label for="nachname">Nachname:</label><br>
+        <input type="text" id="nachname" name="nachname" required><br><br>
+
+        <label for="firma">Firma (Optional):</label><br>
+        <input type="text" id="firma" name="firma"><br><br>
+
+        <label for="strasse">Straße:</label><br>
+        <input type="text" id="strasse" name="strasse" required><br><br>
+
+        <label for="hausnummer">Hausnummer:</label><br>
+        <input type="text" id="hausnummer" name="hausnummer" required><br><br>
+
+        <label for="plz">Postleitzahl:</label><br>
+        <input type="text" id="plz" name="plz" required><br><br>
+
+        <label for="stadt">Stadt:</label><br>
+        <input type="text" id="stadt" name="stadt" required><br><br>
+
+        <label for="land">Land:</label><br>
+        <input type="text" id="land" name="land" required><br><br>
+
+        <label for="telefon">Telefon:</label><br>
+        <input type="tel" id="telefon" name="telefon" required><br><br>
+
+        <button type="submit">Bestellen</button>
+    </form>
+</body>
+</html>
